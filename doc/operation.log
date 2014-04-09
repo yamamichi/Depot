@@ -228,3 +228,7 @@ bash-3.2# rake db:migrate
 ==  CreateProducts: migrated (0.1456s) ========================================
 
 bash-3.2# 
+
+// [deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+// 上記対策として、config/application.rbに以下を追加
+I18n.enforce_available_locales = false
