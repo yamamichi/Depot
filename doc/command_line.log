@@ -1,0 +1,211 @@
+bash-3.2# rake about
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+About your application's environment
+Ruby version              1.9.2 (x86_64-darwin13.0.0)
+RubyGems version          2.2.2
+Rack version              1.3
+Rails version             3.1.0
+JavaScript Runtime        JavaScriptCore
+Active Record version     3.1.0
+Action Pack version       3.1.0
+Active Resource version   3.1.0
+Action Mailer version     3.1.0
+Active Support version    3.1.0
+Middleware                ActionDispatch::Static, Rack::Lock, #<ActiveSupport::Cache::Strategy::LocalCache::Middleware:0x007fda1af71470>, Rack::Runtime, Rack::MethodOverride, Rails::Rack::Logger, ActionDispatch::ShowExceptions, ActionDispatch::RemoteIp, Rack::Sendfile, ActionDispatch::Reloader, ActionDispatch::Callbacks, ActiveRecord::ConnectionAdapters::ConnectionManagement, ActiveRecord::QueryCache, ActionDispatch::Cookies, ActionDispatch::Session::CookieStore, ActionDispatch::Flash, ActionDispatch::ParamsParser, ActionDispatch::Head, Rack::ConditionalGet, Rack::ETag, ActionDispatch::BestStandardsSupport
+Application root          /Users/welox/Repository/Depot
+Environment               development
+bash-3.2# 
+bash-3.2# 
+bash-3.2# rake generate scaffold Product title:string description:text image_url:string price:decimal
+rake aborted!
+Don't know how to build task 'generate'
+/usr/local/rvm/gems/ruby-1.9.2-p320@global/bin/ruby_executable_hooks:15:in `eval'
+/usr/local/rvm/gems/ruby-1.9.2-p320@global/bin/ruby_executable_hooks:15:in `<main>'
+(See full trace by running task with --trace)
+bash-3.2# rake generate scaffold Product title:string description:text image_url:string price:decimal --trace
+rake aborted!
+Don't know how to build task 'generate'
+/usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/rake-10.2.2/lib/rake/task_manager.rb:62:in `[]'
+/usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/rake-10.2.2/lib/rake/application.rb:149:in `invoke_task'
+/usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/rake-10.2.2/lib/rake/application.rb:106:in `block (2 levels) in top_level'
+/usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/rake-10.2.2/lib/rake/application.rb:106:in `each'
+/usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/rake-10.2.2/lib/rake/application.rb:106:in `block in top_level'
+/usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/rake-10.2.2/lib/rake/application.rb:115:in `run_with_threads'
+/usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/rake-10.2.2/lib/rake/application.rb:100:in `top_level'
+/usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/rake-10.2.2/lib/rake/application.rb:78:in `block in run'
+/usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/rake-10.2.2/lib/rake/application.rb:176:in `standard_exception_handling'
+/usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/rake-10.2.2/lib/rake/application.rb:75:in `run'
+/usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/rake-10.2.2/bin/rake:33:in `<top (required)>'
+/usr/local/rvm/rubies/ruby-1.9.2-p320/bin/rake:23:in `load'
+/usr/local/rvm/rubies/ruby-1.9.2-p320/bin/rake:23:in `<main>'
+/usr/local/rvm/gems/ruby-1.9.2-p320@global/bin/ruby_executable_hooks:15:in `eval'
+/usr/local/rvm/gems/ruby-1.9.2-p320@global/bin/ruby_executable_hooks:15:in `<main>'
+bash-3.2# rails generate scaffold Product title:string description:text image_url:string price:decimal
+Bundler is using a binstub that was created for a different gem.
+This is deprecated, in future versions you may need to `bundle binstub rails` to work around a system/bundle conflict.
+        SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+        This poses a security threat. It is strongly recommended that you
+        provide a secret to prevent exploits that may be possible from crafted
+        cookies. This will not be supported in future versions of Rack, and
+        future versions will even invalidate your existing user cookies.
+
+        Called from: /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+      invoke  active_record
+/usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activerecord-3.1.0/lib/active_record/connection_adapters/abstract/connection_specification.rb:71:in `rescue in establish_connection': Please install the mysql2 adapter: `gem install activerecord-mysql2-adapter` (mysql2 is not part of the bundle. Add it to Gemfile.) (RuntimeError)
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activerecord-3.1.0/lib/active_record/connection_adapters/abstract/connection_specification.rb:68:in `establish_connection'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activerecord-3.1.0/lib/active_record/connection_adapters/abstract/connection_specification.rb:60:in `establish_connection'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activerecord-3.1.0/lib/active_record/connection_adapters/abstract/connection_specification.rb:55:in `establish_connection'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activerecord-3.1.0/lib/active_record/railtie.rb:69:in `block (2 levels) in <class:Railtie>'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/lazy_load_hooks.rb:36:in `instance_eval'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/lazy_load_hooks.rb:36:in `execute_hook'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/lazy_load_hooks.rb:43:in `block in run_load_hooks'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/lazy_load_hooks.rb:42:in `each'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/lazy_load_hooks.rb:42:in `run_load_hooks'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activerecord-3.1.0/lib/active_record/base.rb:2184:in `<top (required)>'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/railties-3.1.0/lib/rails/generators/named_base.rb:165:in `pluralize_table_names?'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/railties-3.1.0/lib/rails/generators/named_base.rb:112:in `table_name'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activerecord-3.1.0/lib/rails/generators/active_record/model/model_generator.rb:17:in `create_migration_file'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/task.rb:22:in `run'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/invocation.rb:118:in `invoke_task'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/invocation.rb:124:in `block in invoke_all'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/invocation.rb:124:in `each'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/invocation.rb:124:in `map'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/invocation.rb:124:in `invoke_all'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/group.rb:226:in `dispatch'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/invocation.rb:109:in `invoke'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/group.rb:269:in `block in _invoke_for_class_method'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/shell.rb:74:in `with_padding'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/group.rb:258:in `_invoke_for_class_method'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/group.rb:150:in `_invoke_from_option_orm'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/task.rb:22:in `run'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/invocation.rb:118:in `invoke_task'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/invocation.rb:124:in `block in invoke_all'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/invocation.rb:124:in `each'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/invocation.rb:124:in `map'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/invocation.rb:124:in `invoke_all'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/group.rb:226:in `dispatch'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/base.rb:389:in `start'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/railties-3.1.0/lib/rails/generators.rb:168:in `invoke'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/railties-3.1.0/lib/rails/commands/generate.rb:12:in `<top (required)>'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/dependencies.rb:240:in `require'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/dependencies.rb:240:in `block in require'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/dependencies.rb:223:in `block in load_dependency'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/dependencies.rb:640:in `new_constants_in'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/dependencies.rb:223:in `load_dependency'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/dependencies.rb:240:in `require'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/railties-3.1.0/lib/rails/commands.rb:28:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+bash-3.2# gem install activerecord-mysql2-adapter
+Fetching: mysql2-0.3.15.gem (100%)
+Building native extensions.  This could take a while...
+Successfully installed mysql2-0.3.15
+Fetching: activerecord-mysql2-adapter-0.0.3.gem (100%)
+Successfully installed activerecord-mysql2-adapter-0.0.3
+Installing ri documentation for activerecord-mysql2-adapter-0.0.3
+Installing ri documentation for mysql2-0.3.15
+2 gems installed
+bash-3.2# 
+bash-3.2# 
+bash-3.2# rails generate scaffold Product title:string description:text image_url:string price:decimal
+Bundler is using a binstub that was created for a different gem.
+This is deprecated, in future versions you may need to `bundle binstub rails` to work around a system/bundle conflict.
+        SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+        This poses a security threat. It is strongly recommended that you
+        provide a secret to prevent exploits that may be possible from crafted
+        cookies. This will not be supported in future versions of Rack, and
+        future versions will even invalidate your existing user cookies.
+
+        Called from: /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+      invoke  active_record
+/usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activerecord-3.1.0/lib/active_record/connection_adapters/abstract/connection_specification.rb:71:in `rescue in establish_connection': Please install the mysql2 adapter: `gem install activerecord-mysql2-adapter` (mysql2 is not part of the bundle. Add it to Gemfile.) (RuntimeError)
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activerecord-3.1.0/lib/active_record/connection_adapters/abstract/connection_specification.rb:68:in `establish_connection'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activerecord-3.1.0/lib/active_record/connection_adapters/abstract/connection_specification.rb:60:in `establish_connection'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activerecord-3.1.0/lib/active_record/connection_adapters/abstract/connection_specification.rb:55:in `establish_connection'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activerecord-3.1.0/lib/active_record/railtie.rb:69:in `block (2 levels) in <class:Railtie>'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/lazy_load_hooks.rb:36:in `instance_eval'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/lazy_load_hooks.rb:36:in `execute_hook'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/lazy_load_hooks.rb:43:in `block in run_load_hooks'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/lazy_load_hooks.rb:42:in `each'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/lazy_load_hooks.rb:42:in `run_load_hooks'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activerecord-3.1.0/lib/active_record/base.rb:2184:in `<top (required)>'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/railties-3.1.0/lib/rails/generators/named_base.rb:165:in `pluralize_table_names?'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/railties-3.1.0/lib/rails/generators/named_base.rb:112:in `table_name'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activerecord-3.1.0/lib/rails/generators/active_record/model/model_generator.rb:17:in `create_migration_file'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/task.rb:22:in `run'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/invocation.rb:118:in `invoke_task'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/invocation.rb:124:in `block in invoke_all'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/invocation.rb:124:in `each'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/invocation.rb:124:in `map'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/invocation.rb:124:in `invoke_all'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/group.rb:226:in `dispatch'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/invocation.rb:109:in `invoke'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/group.rb:269:in `block in _invoke_for_class_method'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/shell.rb:74:in `with_padding'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/group.rb:258:in `_invoke_for_class_method'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/group.rb:150:in `_invoke_from_option_orm'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/task.rb:22:in `run'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/invocation.rb:118:in `invoke_task'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/invocation.rb:124:in `block in invoke_all'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/invocation.rb:124:in `each'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/invocation.rb:124:in `map'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/invocation.rb:124:in `invoke_all'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/group.rb:226:in `dispatch'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/thor-0.14.6/lib/thor/base.rb:389:in `start'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/railties-3.1.0/lib/rails/generators.rb:168:in `invoke'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/railties-3.1.0/lib/rails/commands/generate.rb:12:in `<top (required)>'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/dependencies.rb:240:in `require'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/dependencies.rb:240:in `block in require'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/dependencies.rb:223:in `block in load_dependency'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/dependencies.rb:640:in `new_constants_in'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/dependencies.rb:223:in `load_dependency'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/dependencies.rb:240:in `require'
+	from /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/railties-3.1.0/lib/rails/commands.rb:28:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+bash-3.2# rails generate scaffold Product title:string description:text image_url:string price:decimal
+Bundler is using a binstub that was created for a different gem.
+This is deprecated, in future versions you may need to `bundle binstub rails` to work around a system/bundle conflict.
+        SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+        This poses a security threat. It is strongly recommended that you
+        provide a secret to prevent exploits that may be possible from crafted
+        cookies. This will not be supported in future versions of Rack, and
+        future versions will even invalidate your existing user cookies.
+
+        Called from: /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+      invoke  active_record
+      create    db/migrate/20140409021730_create_products.rb
+      create    app/models/product.rb
+      invoke    test_unit
+      create      test/unit/product_test.rb
+      create      test/fixtures/products.yml
+       route  resources :products
+      invoke  scaffold_controller
+      create    app/controllers/products_controller.rb
+      invoke    erb
+      create      app/views/products
+      create      app/views/products/index.html.erb
+      create      app/views/products/edit.html.erb
+      create      app/views/products/show.html.erb
+      create      app/views/products/new.html.erb
+      create      app/views/products/_form.html.erb
+      invoke    test_unit
+      create      test/functional/products_controller_test.rb
+      invoke    helper
+      create      app/helpers/products_helper.rb
+      invoke      test_unit
+      create        test/unit/helpers/products_helper_test.rb
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/products.js.coffee
+      invoke    scss
+      create      app/assets/stylesheets/products.css.scss
+      invoke  scss
+      create    app/assets/stylesheets/scaffolds.css.scss
+bash-3.2# 
