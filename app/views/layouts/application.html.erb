@@ -6,7 +6,8 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<!-- controller毎に特有のcssを読み込むために、controllerの名前と同じcssを読み込む、という設定にする -->
+<body class = '<%= controller.controller_name %>'>
 
 <%= yield %>
 
