@@ -8,4 +8,5 @@ class Product < ActiveRecord::Base
     with: %r{\.(gif|jpg|png)$}i, #正規表現を使った拡張子チェック
     message: 'はgif, jpg, png画像のURLでなければなりません'  #チェック失敗時のエラーメッセージ
   }
+  validates :title, length:{minimum: 10} #文字数チェック
 end

@@ -55,10 +55,22 @@ class ProductTest < ActiveSupport::TestCase
   test "title is not valid without unique title" do
     product = Product.new(title:             products(:ruby).title,
                                          description:  "yyy",
-                                         price: 1,
+                                         price:           1,
                                          image_url:    "zzz.jpg");
     assert !product.save
     assert_equal "has already been taken", product.errors[:title].join('; ')
     assert_equal I18n.translate("activerecord.errors.messages.taken"), product.errors[:title].join('; ') # 文字列をハードコードしない場合は、このようにして組み込みエラーメッセージを読み込める
+  end
+
+  # titleテスト 文字数チェック
+  test "title length must be longer than 10" do
+    product = Product.new(description:  "yyy",
+                                         price:            1,
+                                         image_url:    "zzz.jpg")
+    product.title = "test"
+    assert product.invalid?
+
+    product.title = "title for length test"
+    assert product.valid?
   end
 end
