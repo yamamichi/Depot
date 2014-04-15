@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class ProductTest < ActiveSupport::TestCase
+  fixtures :products # ここで指定したfixtureを読み込む。ただし、デフォルトでは全てのfixtureを読み込む設定になっているので必要ないらしい
   # 全項目必須テスト
   test "product attributes must not be empty" do
     product = Product.new
@@ -28,7 +29,7 @@ class ProductTest < ActiveSupport::TestCase
     assert product.valid?
   end
 
-  # 以下、image_urlのテスト
+  # image_urlテスト 拡張子チェック
   def new_Product(image_url)
     Product.new(title:             "My Book Title",
                         description:  "yyy",
@@ -49,5 +50,15 @@ class ProductTest < ActiveSupport::TestCase
       assert new_Product(name).invalid?, "#{name} should'n't be valid"
     end
   end
-  
+
+  # titleテスト 重複チェック
+  test "title is not valid without unique title" do
+    product = Product.new(title:             products(:ruby).title,
+                                         description:  "yyy",
+                                         price: 1,
+                                         image_url:    "zzz.jpg");
+    assert !product.save
+    assert_equal "has already been taken", product.errors[:title].join('; ')
+    assert_equal I18n.translate("activerecord.errors.messages.taken"), product.errors[:title].join('; ') # 文字列をハードコードしない場合は、このようにして組み込みエラーメッセージを読み込める
+  end
 end
