@@ -9,4 +9,5 @@ class Product < ActiveRecord::Base
     message: 'はgif, jpg, png画像のURLでなければなりません'  #チェック失敗時のエラーメッセージ
   }
   validates :title, length:{minimum: 10} #文字数チェック
+  validates_length_of :image_url, in: 6..50, too_short: "ファイル名が短すぎます", too_long: "ファイル名が長過ぎます"
 end

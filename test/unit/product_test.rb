@@ -40,7 +40,7 @@ class ProductTest < ActiveSupport::TestCase
   # 拡張子はjpg, gif, pngのみ受け付ける
   test "image_url" do
     ok = %w{ fred.gif fred.jpg fred.png FRED.JPG FRED.Jpg http://a.b.c/x/y/z/fred.gif }
-    ng = %w{ fred.doc fred.gif/more ferd.gif.more }
+    ng = %w{ fred.doc fred.gif/more ferd.gif.more  f.jpg http://too/long/image_url/length/maximum/is/50/fred.png}
 
     ok.each do |name|
       assert new_Product(name).valid?, "#{name} should'n't be invalid"
