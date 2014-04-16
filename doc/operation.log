@@ -232,3 +232,33 @@ bash-3.2#
 // [deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
 // 上記対策として、config/application.rbに以下を追加
 I18n.enforce_available_locales = false
+
+// イテレーションC1開始
+welox-no-Mac-mini:Depot welox$ rails generate controller Store index
+Bundler is using a binstub that was created for a different gem.
+This is deprecated, in future versions you may need to `bundle binstub rails` to work around a system/bundle conflict.
+        SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+        This poses a security threat. It is strongly recommended that you
+        provide a secret to prevent exploits that may be possible from crafted
+        cookies. This will not be supported in future versions of Rack, and
+        future versions will even invalidate your existing user cookies.
+
+        Called from: /usr/local/rvm/gems/ruby-1.9.2-p320@global/gems/actionpack-3.1.0/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+
+      create  app/controllers/store_controller.rb
+       route  get "store/index"
+      invoke  erb
+      create    app/views/store
+      create    app/views/store/index.html.erb
+      invoke  test_unit
+      create    test/functional/store_controller_test.rb
+      invoke  helper
+      create    app/helpers/store_helper.rb
+      invoke    test_unit
+      create      test/unit/helpers/store_helper_test.rb
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/store.js.coffee
+      invoke    scss
+      create      app/assets/stylesheets/store.css.scss
+welox-no-Mac-mini:Depot welox$ 
