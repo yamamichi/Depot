@@ -261,4 +261,1269 @@ This is deprecated, in future versions you may need to `bundle binstub rails` to
       create      app/assets/javascripts/store.js.coffee
       invoke    scss
       create      app/assets/stylesheets/store.css.scss
+welox-no-Mac-mini:Depot welox$
+
+// passenger インストール
+welox-no-Mac-mini:Depot welox$ gem install passenger
+Fetching: daemon_controller-1.2.0.gem (100%)
+ERROR:  While executing gem ... (Gem::FilePermissionError)
+    You don't have write permissions for the /usr/local/rvm/gems/ruby-1.9.2-p320 directory.
+welox-no-Mac-mini:Depot welox$ sudo gem install passenger 
+Password:
+Fetching: daemon_controller-1.2.0.gem (100%)
+Successfully installed daemon_controller-1.2.0
+Fetching: passenger-4.0.41.gem (100%)
+Building native extensions.  This could take a while...
+Successfully installed passenger-4.0.41
+Installing ri documentation for daemon_controller-1.2.0
+Installing ri documentation for passenger-4.0.41
+2 gems installed
+welox-no-Mac-mini:Depot welox$ sudo passenger-install-apache2-module
+Welcome to the Phusion Passenger Apache 2 module installer, v4.0.41.
+
+This installer will guide you through the entire installation process. It
+shouldn't take more than 3 minutes in total.
+
+Here's what you can expect from the installation process:
+
+ 1. The Apache 2 module will be installed for you.
+ 2. You'll learn how to configure Apache.
+ 3. You'll learn how to deploy a Ruby on Rails application.
+
+Don't worry if anything goes wrong. This installer will advise you on how to
+solve any problems.
+
+Press Enter to continue, or Ctrl-C to abort.
+
+
+--------------------------------------------
+
+Which languages are you interested in?
+
+Use <space> to select.
+If the menu doesn't display correctly, press '!'
+
+ ‣ ⬢  Ruby
+   ⬢  Python
+   ⬡  Node.js
+   ⬡  Meteor
+
+--------------------------------------------
+
+Checking for required software...
+
+ * Checking for C compiler...
+      Found: yes
+      Location: /usr/bin/cc
+ * Checking for C++ compiler...
+      Found: yes
+      Location: /usr/bin/c++
+ * Checking for Curl development headers with SSL support...
+      Found: yes
+      curl-config location: /usr/bin/curl-config
+      Header location: /usr/include/curl/curl.h
+      Version: libcurl 7.30.0
+      Usable: yes
+      Supports SSL: yes
+ * Checking for OpenSSL development headers...
+      Found: yes
+      Location: /usr/include/openssl/ssl.h
+ * Checking for Zlib development headers...
+      Found: yes
+      Location: /usr/include/zlib.h
+ * Checking for Apache 2...
+      Found: yes
+      Location of httpd: /usr/sbin/httpd
+      Apache version: 2.2.24
+ * Checking for Apache 2 development headers...
+      Found: yes
+      Location of apxs2: /usr/sbin/apxs
+Unable to autodetect the currently active RVM gem set name. This could happen if you ran this program using 'sudo' instead of 'rvmsudo'. When using RVM, you're always supposed to use 'rvmsudo' instead of 'sudo!'.
+
+Please try rerunning this program using 'rvmsudo'. If that doesn't help, please contact this program's author for support.
+welox-no-Mac-mini:Depot welox$ rvmsudo passenger-install-apache2-module
+Warning: can not check `/etc/sudoers` for `secure_path`, falling back to call via `/usr/bin/env`, this breaks rules from `/etc/sudoers`. Run:
+
+    export rvmsudo_secure_path=1
+
+to avoid the warning, put it in shell initialization file to make it persistent.
+
+In case there is no `secure_path` in `/etc/sudoers`. Run:
+
+    export rvmsudo_secure_path=0
+
+to avoid the warning, put it in shell initialization file to make it persistent.
+Welcome to the Phusion Passenger Apache 2 module installer, v4.0.41.
+
+This installer will guide you through the entire installation process. It
+shouldn't take more than 3 minutes in total.
+
+Here's what you can expect from the installation process:
+
+ 1. The Apache 2 module will be installed for you.
+ 2. You'll learn how to configure Apache.
+ 3. You'll learn how to deploy a Ruby on Rails application.
+
+Don't worry if anything goes wrong. This installer will advise you on how to
+solve any problems.
+
+Press Enter to continue, or Ctrl-C to abort.
+
+
+--------------------------------------------
+
+Which languages are you interested in?
+
+Use <space> to select.
+If the menu doesn't display correctly, press '!'
+
+ ‣ ⬢  Ruby
+   ⬢  Python
+   ⬡  Node.js
+   ⬡  Meteor
+
+--------------------------------------------
+
+Checking for required software...
+
+ * Checking for C compiler...
+      Found: yes
+      Location: /usr/bin/cc
+ * Checking for C++ compiler...
+      Found: yes
+      Location: /usr/bin/c++
+ * Checking for Curl development headers with SSL support...
+      Found: yes
+      curl-config location: /usr/bin/curl-config
+      Header location: /usr/include/curl/curl.h
+      Version: libcurl 7.30.0
+      Usable: yes
+      Supports SSL: yes
+ * Checking for OpenSSL development headers...
+      Found: yes
+      Location: /usr/include/openssl/ssl.h
+ * Checking for Zlib development headers...
+      Found: yes
+      Location: /usr/include/zlib.h
+ * Checking for Apache 2...
+      Found: yes
+      Location of httpd: /usr/sbin/httpd
+      Apache version: 2.2.24
+ * Checking for Apache 2 development headers...
+      Found: yes
+      Location of apxs2: /usr/sbin/apxs
+ * Checking for Rake (associated with /usr/local/rvm/gems/ruby-1.9.2-p320/wrappers/ruby)...
+      Found: no
+ * Checking for OpenSSL support for Ruby...
+      Found: yes
+ * Checking for RubyGems...
+      Found: yes
+ * Checking for Ruby development headers...
+      Found: yes
+      Location: /usr/local/rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby.h
+ * Checking for rack...
+      Found: yes
+ * Checking for Apache Portable Runtime (APR) development headers...
+      Found: yes
+      Location: /usr/bin/apr-1-config
+      Version: 1.4.5
+ * Checking for Apache Portable Runtime Utility (APU) development headers...
+      Found: yes
+      Location: /usr/bin/apu-1-config
+      Version: 1.3.12
+
+Some required software is not installed.
+But don't worry, this installer will tell you how to install them.
+Press Enter to continue, or Ctrl-C to abort.
+
+--------------------------------------------
+
+Installation instructions for required software
+
+ * To install Rake (associated with /usr/local/rvm/gems/ruby-1.9.2-p320/wrappers/ruby):
+   Please make sure RubyGems is installed, then run /usr/local/rvm/gems/ruby-1.9.2-p320/wrappers/gem install rake
+
+If the aforementioned instructions didn't solve your problem, then please take
+a look at the Users Guide:
+
+  /usr/local/rvm/gems/ruby-1.9.2-p320@global/gems/passenger-4.0.41/doc/Users guide Apache.html
+  http://www.modrails.com/documentation/Users%20guide%20Apache.html
+welox-no-Mac-mini:Depot welox$ passenger-install-apache2-module
+Welcome to the Phusion Passenger Apache 2 module installer, v4.0.41.
+
+This installer will guide you through the entire installation process. It
+shouldn't take more than 3 minutes in total.
+
+Here's what you can expect from the installation process:
+
+ 1. The Apache 2 module will be installed for you.
+ 2. You'll learn how to configure Apache.
+ 3. You'll learn how to deploy a Ruby on Rails application.
+
+Don't worry if anything goes wrong. This installer will advise you on how to
+solve any problems.
+
+Press Enter to continue, or Ctrl-C to abort.
+
+
+--------------------------------------------
+
+Which languages are you interested in?
+
+Use <space> to select.
+If the menu doesn't display correctly, press '!'
+
+ ‣ ⬢  Ruby
+   ⬢  Python
+   ⬡  Node.js
+   ⬡  Meteor
+
+--------------------------------------------
+
+Checking for required software...
+
+ * Checking for C compiler...
+      Found: yes
+      Location: /usr/bin/cc
+ * Checking for C++ compiler...
+      Found: yes
+      Location: /usr/bin/c++
+ * Checking for Curl development headers with SSL support...
+      Found: yes
+      curl-config location: /usr/bin/curl-config
+      Header location: /usr/include/curl/curl.h
+      Version: libcurl 7.30.0
+      Usable: yes
+      Supports SSL: yes
+ * Checking for OpenSSL development headers...
+      Found: yes
+      Location: /usr/include/openssl/ssl.h
+ * Checking for Zlib development headers...
+      Found: yes
+      Location: /usr/include/zlib.h
+ * Checking for Apache 2...
+      Found: yes
+      Location of httpd: /usr/sbin/httpd
+      Apache version: 2.2.24
+ * Checking for Apache 2 development headers...
+      Found: yes
+      Location of apxs2: /usr/sbin/apxs
+ * Checking for Rake (associated with /usr/local/rvm/gems/ruby-1.9.2-p320/wrappers/ruby)...
+      Found: no
+ * Checking for OpenSSL support for Ruby...
+      Found: yes
+ * Checking for RubyGems...
+      Found: yes
+ * Checking for Ruby development headers...
+      Found: yes
+      Location: /usr/local/rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby.h
+ * Checking for rack...
+      Found: yes
+ * Checking for Apache Portable Runtime (APR) development headers...
+      Found: yes
+      Location: /usr/bin/apr-1-config
+      Version: 1.4.5
+ * Checking for Apache Portable Runtime Utility (APU) development headers...
+      Found: yes
+      Location: /usr/bin/apu-1-config
+      Version: 1.3.12
+
+Some required software is not installed.
+But don't worry, this installer will tell you how to install them.
+Press Enter to continue, or Ctrl-C to abort.
+
+--------------------------------------------
+
+Installation instructions for required software
+
+ * To install Rake (associated with /usr/local/rvm/gems/ruby-1.9.2-p320/wrappers/ruby):
+   Please make sure RubyGems is installed, then run rvmsudo /usr/local/rvm/gems/ruby-1.9.2-p320/wrappers/gem install rake
+
+If the aforementioned instructions didn't solve your problem, then please take
+a look at the Users Guide:
+
+  /usr/local/rvm/gems/ruby-1.9.2-p320@global/gems/passenger-4.0.41/doc/Users guide Apache.html
+  http://www.modrails.com/documentation/Users%20guide%20Apache.html
+welox-no-Mac-mini:Depot welox$ 
+welox-no-Mac-mini:Depot welox$ 
+welox-no-Mac-mini:Depot welox$ gem install rake
+Fetching: rake-10.3.0.gem (100%)
+ERROR:  While executing gem ... (Gem::FilePermissionError)
+    You don't have write permissions for the /usr/local/rvm/gems/ruby-1.9.2-p320 directory.
+welox-no-Mac-mini:Depot welox$ sudo gem install rake
+Fetching: rake-10.3.0.gem (100%)
+Successfully installed rake-10.3.0
+Installing ri documentation for rake-10.3.0
+1 gem installed
+welox-no-Mac-mini:Depot welox$ 
+welox-no-Mac-mini:Depot welox$ passenger-install-apache2-module
+Welcome to the Phusion Passenger Apache 2 module installer, v4.0.41.
+
+This installer will guide you through the entire installation process. It
+shouldn't take more than 3 minutes in total.
+
+Here's what you can expect from the installation process:
+
+ 1. The Apache 2 module will be installed for you.
+ 2. You'll learn how to configure Apache.
+ 3. You'll learn how to deploy a Ruby on Rails application.
+
+Don't worry if anything goes wrong. This installer will advise you on how to
+solve any problems.
+
+Press Enter to continue, or Ctrl-C to abort.
+
+
+--------------------------------------------
+
+Which languages are you interested in?
+
+Use <space> to select.
+If the menu doesn't display correctly, press '!'
+
+ ‣ ⬢  Ruby
+   ⬢  Python
+   ⬡  Node.js
+   ⬡  Meteor
+
+--------------------------------------------
+
+Checking for required software...
+
+ * Checking for C compiler...
+      Found: yes
+      Location: /usr/bin/cc
+ * Checking for C++ compiler...
+      Found: yes
+      Location: /usr/bin/c++
+ * Checking for Curl development headers with SSL support...
+      Found: yes
+      curl-config location: /usr/bin/curl-config
+      Header location: /usr/include/curl/curl.h
+      Version: libcurl 7.30.0
+      Usable: yes
+      Supports SSL: yes
+ * Checking for OpenSSL development headers...
+      Found: yes
+      Location: /usr/include/openssl/ssl.h
+ * Checking for Zlib development headers...
+      Found: yes
+      Location: /usr/include/zlib.h
+ * Checking for Apache 2...
+      Found: yes
+      Location of httpd: /usr/sbin/httpd
+      Apache version: 2.2.24
+ * Checking for Apache 2 development headers...
+      Found: yes
+      Location of apxs2: /usr/sbin/apxs
+ * Checking for Rake (associated with /usr/local/rvm/gems/ruby-1.9.2-p320/wrappers/ruby)...
+      Found: no
+ * Checking for OpenSSL support for Ruby...
+      Found: yes
+ * Checking for RubyGems...
+      Found: yes
+ * Checking for Ruby development headers...
+      Found: yes
+      Location: /usr/local/rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby.h
+ * Checking for rack...
+      Found: yes
+ * Checking for Apache Portable Runtime (APR) development headers...
+      Found: yes
+      Location: /usr/bin/apr-1-config
+      Version: 1.4.5
+ * Checking for Apache Portable Runtime Utility (APU) development headers...
+      Found: yes
+      Location: /usr/bin/apu-1-config
+      Version: 1.3.12
+
+Some required software is not installed.
+But don't worry, this installer will tell you how to install them.
+Press Enter to continue, or Ctrl-C to abort.
+
+--------------------------------------------
+
+Installation instructions for required software
+
+ * To install Rake (associated with /usr/local/rvm/gems/ruby-1.9.2-p320/wrappers/ruby):
+   Please make sure RubyGems is installed, then run rvmsudo /usr/local/rvm/gems/ruby-1.9.2-p320/wrappers/gem install rake
+
+If the aforementioned instructions didn't solve your problem, then please take
+a look at the Users Guide:
+
+  /usr/local/rvm/gems/ruby-1.9.2-p320@global/gems/passenger-4.0.41/doc/Users guide Apache.html
+  http://www.modrails.com/documentation/Users%20guide%20Apache.html
+welox-no-Mac-mini:Depot welox$ 
+
+
+welox-no-Mac-mini:Depot welox$ passenger-install-apache2-module
+Welcome to the Phusion Passenger Apache 2 module installer, v4.0.41.
+
+This installer will guide you through the entire installation process. It
+shouldn't take more than 3 minutes in total.
+
+Here's what you can expect from the installation process:
+
+ 1. The Apache 2 module will be installed for you.
+ 2. You'll learn how to configure Apache.
+ 3. You'll learn how to deploy a Ruby on Rails application.
+
+Don't worry if anything goes wrong. This installer will advise you on how to
+solve any problems.
+
+Press Enter to continue, or Ctrl-C to abort.
+
+
+--------------------------------------------
+
+Which languages are you interested in?
+
+Use <space> to select.
+If the menu doesn't display correctly, press '!'
+
+ ‣ ⬢  Ruby
+   ⬢  Python
+   ⬡  Node.js
+   ⬡  Meteor
+
+--------------------------------------------
+
+Checking for required software...
+
+ * Checking for C compiler...
+      Found: yes
+      Location: /usr/bin/cc
+ * Checking for C++ compiler...
+      Found: yes
+      Location: /usr/bin/c++
+ * Checking for Curl development headers with SSL support...
+      Found: yes
+      curl-config location: /usr/bin/curl-config
+      Header location: /usr/include/curl/curl.h
+      Version: libcurl 7.30.0
+      Usable: yes
+      Supports SSL: yes
+ * Checking for OpenSSL development headers...
+      Found: yes
+      Location: /usr/include/openssl/ssl.h
+ * Checking for Zlib development headers...
+      Found: yes
+      Location: /usr/include/zlib.h
+ * Checking for Apache 2...
+      Found: yes
+      Location of httpd: /usr/sbin/httpd
+      Apache version: 2.2.24
+ * Checking for Apache 2 development headers...
+      Found: yes
+      Location of apxs2: /usr/sbin/apxs
+ * Checking for Rake (associated with /usr/local/rvm/gems/ruby-1.9.2-p320/wrappers/ruby)...
+      Found: no
+ * Checking for OpenSSL support for Ruby...
+      Found: yes
+ * Checking for RubyGems...
+      Found: yes
+ * Checking for Ruby development headers...
+      Found: yes
+      Location: /usr/local/rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby.h
+ * Checking for rack...
+      Found: yes
+ * Checking for Apache Portable Runtime (APR) development headers...
+      Found: yes
+      Location: /usr/bin/apr-1-config
+      Version: 1.4.5
+ * Checking for Apache Portable Runtime Utility (APU) development headers...
+      Found: yes
+      Location: /usr/bin/apu-1-config
+      Version: 1.3.12
+
+Some required software is not installed.
+But don't worry, this installer will tell you how to install them.
+Press Enter to continue, or Ctrl-C to abort.
+
+--------------------------------------------
+
+Installation instructions for required software
+
+ * To install Rake (associated with /usr/local/rvm/gems/ruby-1.9.2-p320/wrappers/ruby):
+   Please make sure RubyGems is installed, then run rvmsudo /usr/local/rvm/gems/ruby-1.9.2-p320/wrappers/gem install rake
+
+If the aforementioned instructions didn't solve your problem, then please take
+a look at the Users Guide:
+
+  /usr/local/rvm/gems/ruby-1.9.2-p320@global/gems/passenger-4.0.41/doc/Users guide Apache.html
+  http://www.modrails.com/documentation/Users%20guide%20Apache.html
+welox-no-Mac-mini:Depot welox$ 
+welox-no-Mac-mini:Depot welox$ 
+welox-no-Mac-mini:Depot welox$ 
+welox-no-Mac-mini:Depot welox$ 
+welox-no-Mac-mini:Depot welox$ rvmsudo /usr/local/rvm/gems/ruby-1.9.2-p320/wrappers/gem install rake
+Fetching: rake-10.3.0.gem (100%)
+Successfully installed rake-10.3.0
+Installing ri documentation for rake-10.3.0
+1 gem installed
+welox-no-Mac-mini:Depot welox$ 
+welox-no-Mac-mini:Depot welox$ passenger-install-apache2-module
+Welcome to the Phusion Passenger Apache 2 module installer, v4.0.41.
+
+This installer will guide you through the entire installation process. It
+shouldn't take more than 3 minutes in total.
+
+Here's what you can expect from the installation process:
+
+ 1. The Apache 2 module will be installed for you.
+ 2. You'll learn how to configure Apache.
+ 3. You'll learn how to deploy a Ruby on Rails application.
+
+Don't worry if anything goes wrong. This installer will advise you on how to
+solve any problems.
+
+Press Enter to continue, or Ctrl-C to abort.
+
+
+--------------------------------------------
+
+Which languages are you interested in?
+
+Use <space> to select.
+If the menu doesn't display correctly, press '!'
+
+ ‣ ⬢  Ruby
+   ⬢  Python
+   ⬡  Node.js
+   ⬡  Meteor
+
+--------------------------------------------
+
+Checking for required software...
+
+ * Checking for C compiler...
+      Found: yes
+      Location: /usr/bin/cc
+ * Checking for C++ compiler...
+      Found: yes
+      Location: /usr/bin/c++
+ * Checking for Curl development headers with SSL support...
+      Found: yes
+      curl-config location: /usr/bin/curl-config
+      Header location: /usr/include/curl/curl.h
+      Version: libcurl 7.30.0
+      Usable: yes
+      Supports SSL: yes
+ * Checking for OpenSSL development headers...
+      Found: yes
+      Location: /usr/include/openssl/ssl.h
+ * Checking for Zlib development headers...
+      Found: yes
+      Location: /usr/include/zlib.h
+ * Checking for Apache 2...
+      Found: yes
+      Location of httpd: /usr/sbin/httpd
+      Apache version: 2.2.24
+ * Checking for Apache 2 development headers...
+      Found: yes
+      Location of apxs2: /usr/sbin/apxs
+ * Checking for Rake (associated with /usr/local/rvm/gems/ruby-1.9.2-p320/wrappers/ruby)...
+      Found: yes
+      Location: /usr/local/rvm/gems/ruby-1.9.2-p320/wrappers/rake
+ * Checking for OpenSSL support for Ruby...
+      Found: yes
+ * Checking for RubyGems...
+      Found: yes
+ * Checking for Ruby development headers...
+      Found: yes
+      Location: /usr/local/rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby.h
+ * Checking for rack...
+      Found: yes
+ * Checking for Apache Portable Runtime (APR) development headers...
+      Found: yes
+      Location: /usr/bin/apr-1-config
+      Version: 1.4.5
+ * Checking for Apache Portable Runtime Utility (APU) development headers...
+      Found: yes
+      Location: /usr/bin/apu-1-config
+      Version: 1.3.12
+
+--------------------------------------------
+
+Sanity checking Apache installation...
+All good!
+
+--------------------------------------------
+Permission problems
+
+This installer must be able to write to the following directory:
+
+  /usr/local/rvm/gems/ruby-1.9.2-p320@global/gems/passenger-4.0.41
+
+But it can't do that, because you're running the installer as welox.
+Please give this installer root privileges, by re-running it with rvmsudo:
+
+  export ORIG_PATH="$PATH"
+  rvmsudo -E /bin/bash
+  export PATH="$ORIG_PATH"
+  /usr/local/rvm/gems/ruby-1.9.2-p320/wrappers/ruby /usr/local/rvm/gems/ruby-1.9.2-p320@global/gems/passenger-4.0.41/bin/passenger-install-apache2-module 
+welox-no-Mac-mini:Depot welox$ rvmsudo passenger-install-apache2-module
+Welcome to the Phusion Passenger Apache 2 module installer, v4.0.41.
+
+This installer will guide you through the entire installation process. It
+shouldn't take more than 3 minutes in total.
+
+Here's what you can expect from the installation process:
+
+ 1. The Apache 2 module will be installed for you.
+ 2. You'll learn how to configure Apache.
+ 3. You'll learn how to deploy a Ruby on Rails application.
+
+Don't worry if anything goes wrong. This installer will advise you on how to
+solve any problems.
+
+Press Enter to continue, or Ctrl-C to abort.
+
+
+--------------------------------------------
+
+Which languages are you interested in?
+
+Use <space> to select.
+If the menu doesn't display correctly, press '!'
+
+ ‣ ⬢  Ruby
+   ⬢  Python
+   ⬡  Node.js
+   ⬡  Meteor
+
+--------------------------------------------
+
+Checking for required software...
+
+ * Checking for C compiler...
+      Found: yes
+      Location: /usr/bin/cc
+ * Checking for C++ compiler...
+      Found: yes
+      Location: /usr/bin/c++
+ * Checking for Curl development headers with SSL support...
+      Found: yes
+      curl-config location: /usr/bin/curl-config
+      Header location: /usr/include/curl/curl.h
+      Version: libcurl 7.30.0
+      Usable: yes
+      Supports SSL: yes
+ * Checking for OpenSSL development headers...
+      Found: yes
+      Location: /usr/include/openssl/ssl.h
+ * Checking for Zlib development headers...
+      Found: yes
+      Location: /usr/include/zlib.h
+ * Checking for Apache 2...
+      Found: yes
+      Location of httpd: /usr/sbin/httpd
+      Apache version: 2.2.24
+ * Checking for Apache 2 development headers...
+      Found: yes
+      Location of apxs2: /usr/sbin/apxs
+ * Checking for Rake (associated with /usr/local/rvm/gems/ruby-1.9.2-p320/wrappers/ruby)...
+      Found: yes
+      Location: /usr/local/rvm/gems/ruby-1.9.2-p320/wrappers/rake
+ * Checking for OpenSSL support for Ruby...
+      Found: yes
+ * Checking for RubyGems...
+      Found: yes
+ * Checking for Ruby development headers...
+      Found: yes
+      Location: /usr/local/rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby.h
+ * Checking for rack...
+      Found: yes
+ * Checking for Apache Portable Runtime (APR) development headers...
+      Found: yes
+      Location: /usr/bin/apr-1-config
+      Version: 1.4.5
+ * Checking for Apache Portable Runtime Utility (APU) development headers...
+      Found: yes
+      Location: /usr/bin/apu-1-config
+      Version: 1.3.12
+
+--------------------------------------------
+
+Sanity checking Apache installation...
+All good!
+
+--------------------------------------------
+Compiling and installing Apache 2 module...
+cd /usr/local/rvm/gems/ruby-1.9.2-p320@global/gems/passenger-4.0.41
+# /usr/local/rvm/gems/ruby-1.9.2-p320/wrappers/rake RELEASE=yes apache2:clean apache2
+rm -rf buildout/cache
+rm -rf buildout/common/libboost_oxt.a buildout/common/libboost_oxt
+rm -f buildout/common/libpassenger_common/Logging.o buildout/common/libpassenger_common/Exceptions.o buildout/common/libpassenger_common/Utils/SystemTime.o buildout/common/libpassenger_common/Utils/StrIntUtils.o buildout/common/libpassenger_common/Utils/IOUtils.o buildout/common/libpassenger_common/Utils.o
+rm -f buildout/common/libpassenger_common/Utils/Base64.o buildout/common/libpassenger_common/Utils/CachedFileStat.o buildout/common/libpassenger_common/Utils/LargeFiles.o buildout/common/libpassenger_common/ApplicationPool2/Implementation.o buildout/common/libpassenger_common/ApplicationPool2/AppTypes.o buildout/common/libpassenger_common/AgentsStarter.o buildout/common/libpassenger_common/AgentsBase.o buildout/common/libpassenger_common/Utils/MD5.o buildout/common/libpassenger_common/Utils/fib.o buildout/common/libpassenger_common/Utils/jsoncpp.o
+rm -f buildout/common/libpassenger_common/agents/LoggingAgent/FilterSupport.o
+rm -rf buildout/common/libpassenger_common
+rm -rf buildout/agents/
+rm -rf buildout/apache2/module_libboost_oxt.a buildout/apache2/module_libboost_oxt
+rm -f buildout/apache2/module_libpassenger_common/Logging.o buildout/apache2/module_libpassenger_common/Exceptions.o buildout/apache2/module_libpassenger_common/Utils/SystemTime.o buildout/apache2/module_libpassenger_common/Utils/StrIntUtils.o buildout/apache2/module_libpassenger_common/Utils/IOUtils.o buildout/apache2/module_libpassenger_common/Utils.o
+rm -f buildout/apache2/module_libpassenger_common/Utils/Base64.o buildout/apache2/module_libpassenger_common/Utils/CachedFileStat.o buildout/apache2/module_libpassenger_common/Utils/LargeFiles.o buildout/apache2/module_libpassenger_common/ApplicationPool2/Implementation.o buildout/apache2/module_libpassenger_common/ApplicationPool2/AppTypes.o buildout/apache2/module_libpassenger_common/AgentsStarter.o buildout/apache2/module_libpassenger_common/AgentsBase.o buildout/apache2/module_libpassenger_common/Utils/MD5.o buildout/apache2/module_libpassenger_common/Utils/fib.o buildout/apache2/module_libpassenger_common/Utils/jsoncpp.o
+rm -f buildout/apache2/module_libpassenger_common/agents/LoggingAgent/FilterSupport.o
+rm -rf buildout/apache2/module_libpassenger_common
+rm -rf buildout/apache2/Configuration.o buildout/apache2/Bucket.o buildout/apache2/Hooks.o buildout/apache2/mod_passenger.o buildout/apache2/mod_passenger.so
+Creating ext/apache2/ConfigurationCommands.cpp
+Creating ext/apache2/ConfigurationFields.hpp
+Creating ext/apache2/CreateDirConfig.cpp
+Creating ext/apache2/MergeDirConfig.cpp
+Creating ext/apache2/ConfigurationSetters.cpp
+Creating ext/apache2/SetHeaders.cpp
+mkdir -p buildout/apache2/module_libpassenger_common
+c++ -Iext -Iext/common -Iext/libev -Wno-ambiguous-member-template -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libpassenger_common/Logging.o -c ext/common/Logging.cpp
+c++ -Iext -Iext/common -Iext/libev -Wno-ambiguous-member-template -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libpassenger_common/Exceptions.o -c ext/common/Exceptions.cpp
+mkdir -p buildout/apache2/module_libpassenger_common/Utils
+c++ -Iext -Iext/common -Iext/libev -Wno-ambiguous-member-template -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libpassenger_common/Utils/SystemTime.o -c ext/common/Utils/SystemTime.cpp
+c++ -Iext -Iext/common -Iext/libev -Wno-ambiguous-member-template -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libpassenger_common/Utils/StrIntUtils.o -c ext/common/Utils/StrIntUtils.cpp
+c++ -Iext -Iext/common -Iext/libev -Wno-ambiguous-member-template -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libpassenger_common/Utils/IOUtils.o -c ext/common/Utils/IOUtils.cpp
+c++ -Iext -Iext/common -Iext/libev -Wno-ambiguous-member-template -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libpassenger_common/Utils.o -c ext/common/Utils.cpp
+mkdir -p buildout/apache2/module_libpassenger_common/ApplicationPool2
+c++ -Iext -Iext/common -Iext/libev -Wno-ambiguous-member-template -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libpassenger_common/ApplicationPool2/AppTypes.o -c ext/common/ApplicationPool2/AppTypes.cpp
+c++ -Iext -Iext/common -Iext/libev -Wno-ambiguous-member-template -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libpassenger_common/Utils/Base64.o -c ext/common/Utils/Base64.cpp
+c++ -Iext -Iext/common -Iext/libev -Wno-ambiguous-member-template -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libpassenger_common/Utils/MD5.o -c ext/common/Utils/MD5.cpp
+c++ -Iext -Iext/common -Iext/libev -Wno-ambiguous-member-template -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libpassenger_common/Utils/LargeFiles.o -c ext/common/Utils/LargeFiles.cpp
+mkdir -p buildout/apache2/module_libboost_oxt/boost
+c++ -Iext -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libboost_oxt/boost/lockpool.o -c ext/boost/libs/atomic/lockpool.cpp
+c++ -Iext -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libboost_oxt/boost/c_regex_traits.o -c ext/boost/libs/regex/src/c_regex_traits.cpp
+c++ -Iext -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libboost_oxt/boost/cpp_regex_traits.o -c ext/boost/libs/regex/src/cpp_regex_traits.cpp
+c++ -Iext -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libboost_oxt/boost/cregex.o -c ext/boost/libs/regex/src/cregex.cpp
+c++ -Iext -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libboost_oxt/boost/instances.o -c ext/boost/libs/regex/src/instances.cpp
+c++ -Iext -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libboost_oxt/boost/posix_api.o -c ext/boost/libs/regex/src/posix_api.cpp
+c++ -Iext -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libboost_oxt/boost/regex.o -c ext/boost/libs/regex/src/regex.cpp
+c++ -Iext -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libboost_oxt/boost/regex_debug.o -c ext/boost/libs/regex/src/regex_debug.cpp
+c++ -Iext -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libboost_oxt/boost/regex_raw_buffer.o -c ext/boost/libs/regex/src/regex_raw_buffer.cpp
+c++ -Iext -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libboost_oxt/boost/regex_traits_defaults.o -c ext/boost/libs/regex/src/regex_traits_defaults.cpp
+c++ -Iext -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libboost_oxt/boost/static_mutex.o -c ext/boost/libs/regex/src/static_mutex.cpp
+c++ -Iext -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libboost_oxt/boost/wc_regex_traits.o -c ext/boost/libs/regex/src/wc_regex_traits.cpp
+c++ -Iext -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libboost_oxt/boost/wide_posix_api.o -c ext/boost/libs/regex/src/wide_posix_api.cpp
+c++ -Iext -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libboost_oxt/boost/winstances.o -c ext/boost/libs/regex/src/winstances.cpp
+c++ -Iext -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libboost_oxt/boost/error_code.o -c ext/boost/libs/system/src/error_code.cpp
+c++ -Iext -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libboost_oxt/boost/future.o -c ext/boost/libs/thread/src/future.cpp
+c++ -Iext -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libboost_oxt/boost/once.o -c ext/boost/libs/thread/src/pthread/once.cpp
+c++ -Iext -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libboost_oxt/boost/once_atomic.o -c ext/boost/libs/thread/src/pthread/once_atomic.cpp
+c++ -Iext -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libboost_oxt/boost/thread.o -c ext/boost/libs/thread/src/pthread/thread.cpp
+In file included from ext/boost/libs/thread/src/pthread/thread.cpp:30:
+ext/boost/libs/thread/src/pthread/./timeconv.inl:51:13: warning: unused function 'to_time' [-Wunused-function]
+inline void to_time(int milliseconds, timespec& ts)
+            ^
+ext/boost/libs/thread/src/pthread/./timeconv.inl:71:13: warning: unused function 'to_timespec_duration' [-Wunused-function]
+inline void to_timespec_duration(const boost::xtime& xt, timespec& ts)
+            ^
+ext/boost/libs/thread/src/pthread/./timeconv.inl:104:13: warning: unused function 'to_duration' [-Wunused-function]
+inline void to_duration(boost::xtime xt, int& milliseconds)
+            ^
+ext/boost/libs/thread/src/pthread/./timeconv.inl:126:13: warning: unused function 'to_microduration' [-Wunused-function]
+inline void to_microduration(boost::xtime xt, int& microseconds)
+            ^
+4 warnings generated.
+c++ -Iext -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libboost_oxt/boost/tss_null.o -c ext/boost/libs/thread/src/tss_null.cpp
+mkdir -p buildout/apache2/module_libboost_oxt/oxt
+c++ -Iext -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libboost_oxt/oxt/implementation.o -c ext/oxt/implementation.cpp
+c++ -Iext -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/module_libboost_oxt/oxt/system_calls.o -c ext/oxt/system_calls.cpp
+mkdir -p buildout/apache2/module_libboost_oxt
+rm -rf buildout/apache2/module_libboost_oxt.a
+ar cru buildout/apache2/module_libboost_oxt.a buildout/apache2/module_libboost_oxt/boost/lockpool.o buildout/apache2/module_libboost_oxt/boost/c_regex_traits.o buildout/apache2/module_libboost_oxt/boost/cpp_regex_traits.o buildout/apache2/module_libboost_oxt/boost/cregex.o buildout/apache2/module_libboost_oxt/boost/instances.o buildout/apache2/module_libboost_oxt/boost/posix_api.o buildout/apache2/module_libboost_oxt/boost/regex.o buildout/apache2/module_libboost_oxt/boost/regex_debug.o buildout/apache2/module_libboost_oxt/boost/regex_raw_buffer.o buildout/apache2/module_libboost_oxt/boost/regex_traits_defaults.o buildout/apache2/module_libboost_oxt/boost/static_mutex.o buildout/apache2/module_libboost_oxt/boost/wc_regex_traits.o buildout/apache2/module_libboost_oxt/boost/wide_posix_api.o buildout/apache2/module_libboost_oxt/boost/winstances.o buildout/apache2/module_libboost_oxt/boost/error_code.o buildout/apache2/module_libboost_oxt/boost/future.o buildout/apache2/module_libboost_oxt/boost/once.o buildout/apache2/module_libboost_oxt/boost/once_atomic.o buildout/apache2/module_libboost_oxt/boost/thread.o buildout/apache2/module_libboost_oxt/boost/tss_null.o buildout/apache2/module_libboost_oxt/oxt/implementation.o buildout/apache2/module_libboost_oxt/oxt/system_calls.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib: file: buildout/apache2/module_libboost_oxt.a(regex_debug.o) has no symbols
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib: file: buildout/apache2/module_libboost_oxt.a(tss_null.o) has no symbols
+ranlib buildout/apache2/module_libboost_oxt.a
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib: file: buildout/apache2/module_libboost_oxt.a(regex_debug.o) has no symbols
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib: file: buildout/apache2/module_libboost_oxt.a(tss_null.o) has no symbols
+cc  -Iext -Iext/common -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -o buildout/apache2/mod_passenger.o -c ext/apache2/mod_passenger.c
+Creating ext/common/Constants.h
+c++  -Iext -Iext/common -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/Configuration.o -c ext/apache2/Configuration.cpp
+c++  -Iext -Iext/common -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/Bucket.o -c ext/apache2/Bucket.cpp
+c++  -Iext -Iext/common -fPIC -DDARWIN -DSIGPROCMASK_SETS_THREAD_MASK -I/usr/include/apr-1 -I/usr/include/apr-1 -I/usr/include/apache2 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/apache2/Hooks.o -c ext/apache2/Hooks.cpp
+c++ -flat_namespace -bundle -undefined dynamic_lookup buildout/apache2/Configuration.o buildout/apache2/Bucket.o buildout/apache2/Hooks.o buildout/apache2/mod_passenger.o -fPIC -o buildout/apache2/mod_passenger.so   buildout/apache2/module_libpassenger_common/Logging.o buildout/apache2/module_libpassenger_common/Exceptions.o buildout/apache2/module_libpassenger_common/Utils/SystemTime.o buildout/apache2/module_libpassenger_common/Utils/StrIntUtils.o buildout/apache2/module_libpassenger_common/Utils/IOUtils.o buildout/apache2/module_libpassenger_common/Utils.o buildout/apache2/module_libpassenger_common/ApplicationPool2/AppTypes.o buildout/apache2/module_libpassenger_common/Utils/Base64.o buildout/apache2/module_libpassenger_common/Utils/MD5.o buildout/apache2/module_libpassenger_common/Utils/LargeFiles.o buildout/apache2/module_libboost_oxt.a -fPIC -L/usr/lib -lapr-1 -L/usr/lib -laprutil-1 -std=gnu++11 -lpthread   
+mkdir -p buildout/common/libboost_oxt/boost
+c++ -Iext  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libboost_oxt/boost/lockpool.o -c ext/boost/libs/atomic/lockpool.cpp
+c++ -Iext  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libboost_oxt/boost/c_regex_traits.o -c ext/boost/libs/regex/src/c_regex_traits.cpp
+c++ -Iext  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libboost_oxt/boost/cpp_regex_traits.o -c ext/boost/libs/regex/src/cpp_regex_traits.cpp
+c++ -Iext  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libboost_oxt/boost/cregex.o -c ext/boost/libs/regex/src/cregex.cpp
+c++ -Iext  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libboost_oxt/boost/instances.o -c ext/boost/libs/regex/src/instances.cpp
+c++ -Iext  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libboost_oxt/boost/posix_api.o -c ext/boost/libs/regex/src/posix_api.cpp
+c++ -Iext  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libboost_oxt/boost/regex.o -c ext/boost/libs/regex/src/regex.cpp
+c++ -Iext  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libboost_oxt/boost/regex_debug.o -c ext/boost/libs/regex/src/regex_debug.cpp
+c++ -Iext  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libboost_oxt/boost/regex_raw_buffer.o -c ext/boost/libs/regex/src/regex_raw_buffer.cpp
+c++ -Iext  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libboost_oxt/boost/regex_traits_defaults.o -c ext/boost/libs/regex/src/regex_traits_defaults.cpp
+c++ -Iext  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libboost_oxt/boost/static_mutex.o -c ext/boost/libs/regex/src/static_mutex.cpp
+c++ -Iext  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libboost_oxt/boost/wc_regex_traits.o -c ext/boost/libs/regex/src/wc_regex_traits.cpp
+c++ -Iext  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libboost_oxt/boost/wide_posix_api.o -c ext/boost/libs/regex/src/wide_posix_api.cpp
+c++ -Iext  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libboost_oxt/boost/winstances.o -c ext/boost/libs/regex/src/winstances.cpp
+c++ -Iext  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libboost_oxt/boost/error_code.o -c ext/boost/libs/system/src/error_code.cpp
+c++ -Iext  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libboost_oxt/boost/future.o -c ext/boost/libs/thread/src/future.cpp
+c++ -Iext  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libboost_oxt/boost/once.o -c ext/boost/libs/thread/src/pthread/once.cpp
+c++ -Iext  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libboost_oxt/boost/once_atomic.o -c ext/boost/libs/thread/src/pthread/once_atomic.cpp
+c++ -Iext  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libboost_oxt/boost/thread.o -c ext/boost/libs/thread/src/pthread/thread.cpp
+In file included from ext/boost/libs/thread/src/pthread/thread.cpp:30:
+ext/boost/libs/thread/src/pthread/./timeconv.inl:51:13: warning: unused function 'to_time' [-Wunused-function]
+inline void to_time(int milliseconds, timespec& ts)
+            ^
+ext/boost/libs/thread/src/pthread/./timeconv.inl:71:13: warning: unused function 'to_timespec_duration' [-Wunused-function]
+inline void to_timespec_duration(const boost::xtime& xt, timespec& ts)
+            ^
+ext/boost/libs/thread/src/pthread/./timeconv.inl:104:13: warning: unused function 'to_duration' [-Wunused-function]
+inline void to_duration(boost::xtime xt, int& milliseconds)
+            ^
+ext/boost/libs/thread/src/pthread/./timeconv.inl:126:13: warning: unused function 'to_microduration' [-Wunused-function]
+inline void to_microduration(boost::xtime xt, int& microseconds)
+            ^
+4 warnings generated.
+c++ -Iext  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libboost_oxt/boost/tss_null.o -c ext/boost/libs/thread/src/tss_null.cpp
+mkdir -p buildout/common/libboost_oxt/oxt
+c++ -Iext  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libboost_oxt/oxt/implementation.o -c ext/oxt/implementation.cpp
+c++ -Iext  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libboost_oxt/oxt/system_calls.o -c ext/oxt/system_calls.cpp
+mkdir -p buildout/common/libboost_oxt
+rm -rf buildout/common/libboost_oxt.a
+ar cru buildout/common/libboost_oxt.a buildout/common/libboost_oxt/boost/lockpool.o buildout/common/libboost_oxt/boost/c_regex_traits.o buildout/common/libboost_oxt/boost/cpp_regex_traits.o buildout/common/libboost_oxt/boost/cregex.o buildout/common/libboost_oxt/boost/instances.o buildout/common/libboost_oxt/boost/posix_api.o buildout/common/libboost_oxt/boost/regex.o buildout/common/libboost_oxt/boost/regex_debug.o buildout/common/libboost_oxt/boost/regex_raw_buffer.o buildout/common/libboost_oxt/boost/regex_traits_defaults.o buildout/common/libboost_oxt/boost/static_mutex.o buildout/common/libboost_oxt/boost/wc_regex_traits.o buildout/common/libboost_oxt/boost/wide_posix_api.o buildout/common/libboost_oxt/boost/winstances.o buildout/common/libboost_oxt/boost/error_code.o buildout/common/libboost_oxt/boost/future.o buildout/common/libboost_oxt/boost/once.o buildout/common/libboost_oxt/boost/once_atomic.o buildout/common/libboost_oxt/boost/thread.o buildout/common/libboost_oxt/boost/tss_null.o buildout/common/libboost_oxt/oxt/implementation.o buildout/common/libboost_oxt/oxt/system_calls.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib: file: buildout/common/libboost_oxt.a(regex_debug.o) has no symbols
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib: file: buildout/common/libboost_oxt.a(tss_null.o) has no symbols
+ranlib buildout/common/libboost_oxt.a
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib: file: buildout/common/libboost_oxt.a(regex_debug.o) has no symbols
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib: file: buildout/common/libboost_oxt.a(tss_null.o) has no symbols
+mkdir -p buildout/common/libpassenger_common
+c++ -Iext -Iext/common -Iext/libev -Wno-ambiguous-member-template  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libpassenger_common/Logging.o -c ext/common/Logging.cpp
+c++ -Iext -Iext/common -Iext/libev -Wno-ambiguous-member-template  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libpassenger_common/Exceptions.o -c ext/common/Exceptions.cpp
+mkdir -p buildout/common/libpassenger_common/Utils
+c++ -Iext -Iext/common -Iext/libev -Wno-ambiguous-member-template  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libpassenger_common/Utils/SystemTime.o -c ext/common/Utils/SystemTime.cpp
+c++ -Iext -Iext/common -Iext/libev -Wno-ambiguous-member-template  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libpassenger_common/Utils/StrIntUtils.o -c ext/common/Utils/StrIntUtils.cpp
+c++ -Iext -Iext/common -Iext/libev -Wno-ambiguous-member-template  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libpassenger_common/Utils/IOUtils.o -c ext/common/Utils/IOUtils.cpp
+c++ -Iext -Iext/common -Iext/libev -Wno-ambiguous-member-template  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libpassenger_common/Utils.o -c ext/common/Utils.cpp
+c++ -Iext -Iext/common -Iext/libev -Wno-ambiguous-member-template  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libpassenger_common/Utils/Base64.o -c ext/common/Utils/Base64.cpp
+c++ -Iext -Iext/common -Iext/libev -Wno-ambiguous-member-template  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libpassenger_common/Utils/CachedFileStat.o -c ext/common/Utils/CachedFileStat.cpp
+c++ -Iext -Iext/common -Iext/libev -Wno-ambiguous-member-template  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libpassenger_common/Utils/LargeFiles.o -c ext/common/Utils/LargeFiles.cpp
+mkdir -p buildout/common/libpassenger_common/ApplicationPool2
+c++ -Iext -Iext/common -Iext/libev -Wno-ambiguous-member-template  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libpassenger_common/ApplicationPool2/Implementation.o -c ext/common/ApplicationPool2/Implementation.cpp
+c++ -Iext -Iext/common -Iext/libev -Wno-ambiguous-member-template  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libpassenger_common/ApplicationPool2/AppTypes.o -c ext/common/ApplicationPool2/AppTypes.cpp
+c++ -Iext -Iext/common -Iext/libev -Wno-ambiguous-member-template  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libpassenger_common/AgentsBase.o -c ext/common/agents/Base.cpp
+c++ -Iext -Iext/common -Iext/libev -Wno-ambiguous-member-template  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libpassenger_common/Utils/MD5.o -c ext/common/Utils/MD5.cpp
+cc -Iext -Iext/common -Iext/libev -Wno-ambiguous-member-template  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -o buildout/common/libpassenger_common/Utils/fib.o -c ext/common/Utils/fib.c
+c++ -Iext -Iext/common -Iext/libev -Wno-ambiguous-member-template  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libpassenger_common/Utils/jsoncpp.o -c ext/common/Utils/jsoncpp.cpp
+mkdir -p buildout/libev/
+cd buildout/libev/ && sh /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/passenger-4.0.41/ext/libev/configure --disable-shared --enable-static CC='cc' CXX='c++' CFLAGS='-D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -w' orig_CFLAGS=1
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/passenger-4.0.41/ext/libev/install-sh -c -d
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking for style of include used by make... GNU
+checking dependency style of cc... gcc3
+checking build system type... i386-apple-darwin13.0.0
+checking host system type... i386-apple-darwin13.0.0
+checking how to print strings... printf
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by cc... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
+checking if the linker (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld) is GNU ld... no
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm
+checking the name lister (/usr/bin/nm) interface... rm: conftest.dSYM: is a directory
+BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 196608
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert i386-apple-darwin13.0.0 file names to i386-apple-darwin13.0.0 format... func_convert_file_noop
+checking how to convert i386-apple-darwin13.0.0 file names to toolchain format... func_convert_file_noop
+checking for /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld option to reload object files... -r
+checking for objdump... no
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... rm: conftest.dSYM: is a directory
+no
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm output from cc object... rm: conftest.dSYM: is a directory
+ok
+checking for sysroot... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dsymutil... dsymutil
+checking for nmedit... nmedit
+checking for lipo... lipo
+checking for otool... otool
+checking for otool64... no
+checking for -single_module linker flag... yes
+checking for -exported_symbols_list linker flag... yes
+checking for -force_load linker flag... yes
+checking how to run the C preprocessor... cc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if cc supports -fno-rtti -fno-exceptions... yes
+checking for cc option to produce PIC... -fno-common -DPIC
+checking if cc PIC flag -fno-common -DPIC works... yes
+checking if cc static flag -static works... no
+checking if cc supports -c -o file.o... yes
+checking if cc supports -c -o file.o... (cached) yes
+checking whether the cc linker (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... darwin13.0.0 dyld
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking sys/inotify.h usability... no
+checking sys/inotify.h presence... no
+checking for sys/inotify.h... no
+checking sys/epoll.h usability... no
+checking sys/epoll.h presence... no
+checking for sys/epoll.h... no
+checking sys/event.h usability... yes
+checking sys/event.h presence... yes
+checking for sys/event.h... yes
+checking port.h usability... no
+checking port.h presence... no
+checking for port.h... no
+checking poll.h usability... yes
+checking poll.h presence... yes
+checking for poll.h... yes
+checking sys/select.h usability... yes
+checking sys/select.h presence... yes
+checking for sys/select.h... yes
+checking sys/eventfd.h usability... no
+checking sys/eventfd.h presence... no
+checking for sys/eventfd.h... no
+checking sys/signalfd.h usability... no
+checking sys/signalfd.h presence... no
+checking for sys/signalfd.h... no
+checking for inotify_init... no
+checking for epoll_ctl... no
+checking for kqueue... yes
+checking for port_create... no
+checking for poll... yes
+checking for select... yes
+checking for eventfd... no
+checking for signalfd... no
+checking for clock_gettime... no
+checking for clock_gettime in -lrt... no
+checking for clock_gettime... no
+checking for nanosleep... yes
+checking for library containing floor... none required
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+rm -f buildout/libev//libev.la
+cd buildout/libev/ && make libev.la
+/bin/sh ./libtool --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I/usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/passenger-4.0.41/ext/libev     -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -w -MT ev.lo -MD -MP -MF .deps/ev.Tpo -c -o ev.lo /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/passenger-4.0.41/ext/libev/ev.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I/usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/passenger-4.0.41/ext/libev -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -w -MT ev.lo -MD -MP -MF .deps/ev.Tpo -c /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/passenger-4.0.41/ext/libev/ev.c -o ev.o
+mv -f .deps/ev.Tpo .deps/ev.Plo
+/bin/sh ./libtool --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I/usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/passenger-4.0.41/ext/libev     -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -w -MT event.lo -MD -MP -MF .deps/event.Tpo -c -o event.lo /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/passenger-4.0.41/ext/libev/event.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I/usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/passenger-4.0.41/ext/libev -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -w -MT event.lo -MD -MP -MF .deps/event.Tpo -c /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/passenger-4.0.41/ext/libev/event.c -o event.o
+mv -f .deps/event.Tpo .deps/event.Plo
+/bin/sh ./libtool --tag=CC   --mode=link cc  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -w -version-info 4:0:0  -o libev.la -rpath /usr/local/lib ev.lo event.lo  
+libtool: link: ar cru .libs/libev.a  ev.o event.o
+libtool: link: ranlib .libs/libev.a
+libtool: link: ( cd ".libs" && rm -f "libev.la" && ln -s "../libev.la" "libev.la" )
+mkdir -p buildout/libeio/
+cd buildout/libeio/ && sh /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/passenger-4.0.41/ext/libeio/configure --disable-shared --enable-static CC='cc' CXX='c++' CFLAGS='-D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -w'
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/passenger-4.0.41/ext/libeio/install-sh -c -d
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for style of include used by make... GNU
+checking for gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking dependency style of cc... none
+checking how to run the C preprocessor... cc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... rm: conftest.dSYM: is a directory
+rm: conftest.dSYM: is a directory
+yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking build system type... x86_64-apple-darwin13.0.0
+checking host system type... x86_64-apple-darwin13.0.0
+checking how to print strings... printf
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by cc... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
+checking if the linker (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld) is GNU ld... no
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm
+checking the name lister (/usr/bin/nm) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 196608
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-apple-darwin13.0.0 file names to x86_64-apple-darwin13.0.0 format... func_convert_file_noop
+checking how to convert x86_64-apple-darwin13.0.0 file names to toolchain format... func_convert_file_noop
+checking for /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld option to reload object files... -r
+checking for objdump... no
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... no
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm output from cc object... ok
+checking for sysroot... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dsymutil... dsymutil
+checking for nmedit... nmedit
+checking for lipo... lipo
+checking for otool... otool
+checking for otool64... no
+checking for -single_module linker flag... yes
+checking for -exported_symbols_list linker flag... yes
+checking for -force_load linker flag... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if cc supports -fno-rtti -fno-exceptions... yes
+checking for cc option to produce PIC... -fno-common -DPIC
+checking if cc PIC flag -fno-common -DPIC works... yes
+checking if cc static flag -static works... no
+checking if cc supports -c -o file.o... yes
+checking if cc supports -c -o file.o... (cached) yes
+checking whether the cc linker (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... darwin13.0.0 dyld
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking for gcc... (cached) cc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether cc accepts -g... (cached) yes
+checking for cc option to accept ISO C89... (cached) none needed
+checking dependency style of cc... (cached) none
+checking for stdint.h... (cached) yes
+checking sys/syscall.h usability... yes
+checking sys/syscall.h presence... yes
+checking for sys/syscall.h... yes
+checking sys/prctl.h usability... no
+checking sys/prctl.h presence... no
+checking for sys/prctl.h... no
+checking for library containing pthread_create... none required
+checking for utimes... yes
+checking for futimes... yes
+checking for readahead... no
+checking for fdatasync... yes
+checking for pread and pwrite... yes
+checking for sendfile... yes
+checking for sync_file_range... no
+checking for fallocate... no
+checking for sys_syncfs... no
+checking for prctl_set_name... no
+checking for posix_madvise... yes
+checking for posix_fadvise... no
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+rm -f buildout/libeio//libeio.la
+cd buildout/libeio/ && make libeio.la
+/bin/sh ./libtool --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I/usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/passenger-4.0.41/ext/libeio     -O3 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -w -c -o eio.lo /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/passenger-4.0.41/ext/libeio/eio.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I/usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/passenger-4.0.41/ext/libeio -O3 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -w -c /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/passenger-4.0.41/ext/libeio/eio.c -o eio.o
+/bin/sh ./libtool --tag=CC   --mode=link cc  -O3 -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -w -version-info 1:0  -o libeio.la -rpath /usr/local/lib eio.lo  
+libtool: link: ar cru .libs/libeio.a  eio.o
+libtool: link: ranlib .libs/libeio.a
+libtool: link: ( cd ".libs" && rm -f "libeio.la" && ln -s "../libeio.la" "libeio.la" )
+mkdir -p buildout/agents/
+c++ -o buildout/agents/PassengerHelperAgent.o  -Iext -Iext/common  -Iext/libev -Wno-ambiguous-member-template -Iext/libeio -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -c ext/common/agents/HelperAgent/Main.cpp
+c++ buildout/agents/PassengerHelperAgent.o -o buildout/agents/PassengerHelperAgent buildout/common/libpassenger_common/Logging.o buildout/common/libpassenger_common/Exceptions.o buildout/common/libpassenger_common/Utils/SystemTime.o buildout/common/libpassenger_common/Utils/StrIntUtils.o buildout/common/libpassenger_common/Utils/IOUtils.o buildout/common/libpassenger_common/Utils.o buildout/common/libpassenger_common/Utils/Base64.o buildout/common/libpassenger_common/Utils/CachedFileStat.o buildout/common/libpassenger_common/Utils/LargeFiles.o buildout/common/libpassenger_common/ApplicationPool2/Implementation.o buildout/common/libpassenger_common/ApplicationPool2/AppTypes.o buildout/common/libpassenger_common/AgentsBase.o buildout/common/libpassenger_common/Utils/MD5.o buildout/common/libpassenger_common/Utils/fib.o buildout/common/libpassenger_common/Utils/jsoncpp.o buildout/common/libboost_oxt.a   buildout/libev/.libs/libev.a buildout/libeio/.libs/libeio.a -std=gnu++11 -lpthread -Wl,-dead_strip  
+c++ -o buildout/agents/PassengerWatchdog.o  -Iext -Iext/common  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -c ext/common/agents/Watchdog/Main.cpp
+c++ buildout/agents/PassengerWatchdog.o buildout/common/libpassenger_common/Logging.o buildout/common/libpassenger_common/Exceptions.o buildout/common/libpassenger_common/Utils/SystemTime.o buildout/common/libpassenger_common/Utils/StrIntUtils.o buildout/common/libpassenger_common/Utils/IOUtils.o buildout/common/libpassenger_common/Utils.o buildout/common/libpassenger_common/AgentsBase.o buildout/common/libpassenger_common/Utils/Base64.o buildout/common/libboost_oxt.a   -std=gnu++11 -lpthread -Wl,-dead_strip   -o buildout/agents/PassengerWatchdog    -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -std=gnu++11 -lpthread  
+mkdir -p buildout/common/libpassenger_common/agents/LoggingAgent
+c++ -Iext -Iext/common -Iext/libev -Wno-ambiguous-member-template  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -o buildout/common/libpassenger_common/agents/LoggingAgent/FilterSupport.o -c ext/common/agents/LoggingAgent/FilterSupport.cpp
+c++ -o buildout/agents/PassengerLoggingAgent.o  -Iext -Iext/common  -Iext/libev -Wno-ambiguous-member-template   -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP -c ext/common/agents/LoggingAgent/Main.cpp
+c++ buildout/agents/PassengerLoggingAgent.o -o buildout/agents/PassengerLoggingAgent buildout/common/libpassenger_common/Logging.o buildout/common/libpassenger_common/Exceptions.o buildout/common/libpassenger_common/Utils/SystemTime.o buildout/common/libpassenger_common/Utils/StrIntUtils.o buildout/common/libpassenger_common/Utils/IOUtils.o buildout/common/libpassenger_common/Utils.o buildout/common/libpassenger_common/agents/LoggingAgent/FilterSupport.o buildout/common/libpassenger_common/AgentsBase.o buildout/common/libpassenger_common/Utils/Base64.o buildout/common/libpassenger_common/Utils/MD5.o buildout/common/libboost_oxt.a   buildout/libev/.libs/libev.a -lcurl -lz -std=gnu++11 -lpthread -Wl,-dead_strip  
+c++ ext/common/agents/SpawnPreparer.cpp -o buildout/agents/SpawnPreparer    -Iext -Iext/common  -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -std=gnu++11 -DHAS_UNORDERED_MAP buildout/common/libpassenger_common/Utils/Base64.o buildout/common/libboost_oxt.a -std=gnu++11 -lpthread  
+cc ext/common/agents/TempDirToucher.c -o buildout/agents/TempDirToucher   -D_REENTRANT -I/usr/local/include -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -fcommon -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -g -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -lpthread  
+mkdir -p 'buildout/ruby/ruby-1.9.2-x86_64-macosx/'
+cd 'buildout/ruby/ruby-1.9.2-x86_64-macosx/' && /usr/local/rvm/gems/ruby-1.9.2-p320/wrappers/ruby '/usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/passenger-4.0.41/ext/ruby/extconf.rb'
+checking for alloca.h... yes
+checking for ruby/version.h... yes
+checking for ruby/io.h... yes
+checking for ruby_version... no
+checking for rb_thread_io_blocking_region()... no
+creating Makefile
+cd 'buildout/ruby/ruby-1.9.2-x86_64-macosx/' && make
+/usr/local/opt/gcc46/bin/gcc-4.6 -I. -I/usr/local/rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/x86_64-darwin13.0.0 -I/usr/local/rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/backward -I/usr/local/rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1 -I/usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/passenger-4.0.41/ext/ruby -DHAVE_ALLOCA_H -DHAVE_RUBY_VERSION_H -DHAVE_RUBY_IO_H -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -fno-common -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe -g  -o passenger_native_support.o -c /usr/local/rvm/rubies/ruby-1.9.2-p320/lib/ruby/gems/1.9.1/gems/passenger-4.0.41/ext/ruby/passenger_native_support.c
+/usr/local/opt/gcc46/bin/gcc-4.6 -dynamic -bundle -o passenger_native_support.bundle passenger_native_support.o -L. -L/usr/local/rvm/rubies/ruby-1.9.2-p320/lib -L/usr/local/opt/libyaml/lib -L. -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress -Wl,-flat_namespace  -lruby.1.9.1   -lpthread
+
+--------------------------------------------
+Almost there!
+
+Please edit your Apache configuration file, and add these lines:
+
+   LoadModule passenger_module /usr/local/rvm/gems/ruby-1.9.2-p320@global/gems/passenger-4.0.41/buildout/apache2/mod_passenger.so
+   <IfModule mod_passenger.c>
+     PassengerRoot /usr/local/rvm/gems/ruby-1.9.2-p320@global/gems/passenger-4.0.41
+     PassengerDefaultRuby /usr/local/rvm/gems/ruby-1.9.2-p320/wrappers/ruby
+   </IfModule>
+
+After you restart Apache, you are ready to deploy any number of web
+applications on Apache, with a minimum amount of configuration!
+
+Press ENTER to continue.
+
+
+--------------------------------------------
+
+Deploying a web application: an example
+
+Suppose you have a web application in /somewhere. Add a virtual host to your
+Apache configuration file and set its DocumentRoot to /somewhere/public:
+
+   <VirtualHost *:80>
+      ServerName www.yourhost.com
+      # !!! Be sure to point DocumentRoot to 'public'!
+      DocumentRoot /somewhere/public    
+      <Directory /somewhere/public>
+         # This relaxes Apache security settings.
+         AllowOverride all
+         # MultiViews must be turned off.
+         Options -MultiViews
+      </Directory>
+   </VirtualHost>
+
+And that's it! You may also want to check the Users Guide for security and
+optimization tips, troubleshooting and other useful information:
+
+  /usr/local/rvm/gems/ruby-1.9.2-p320@global/gems/passenger-4.0.41/doc/Users guide Apache.html
+  http://www.modrails.com/documentation/Users%20guide%20Apache.html
+
+Enjoy Phusion Passenger, a product of Phusion (www.phusion.nl) :-)
+https://www.phusionpassenger.com
+
+Phusion Passenger is a trademark of Hongli Lai & Ninh Bui.
+welox-no-Mac-mini:Depot welox$ 
+
+
+// 各種apache設定
+
+sudo vim /etc/apache2/extra/httpd-vhosts.conf
+// ここで、RackEnv developmentを記載することで開発環境のものになる。これを指定しないと本番環境と見なされ、depot_productionデータベースを読みにいってしまう。
+# ruby depot
+<VirtualHost *:80>
+    ServerName local.depot.dev
+    DocumentRoot /Users/welox/Repository/Depot/public
+    ErrorLog "/private/var/log/apache2/local.depot.dev-error_log"
+    CustomLog "/private/var/log/apache2/local.depot.dev-access_log" common
+    RackEnv development 
+    <Directory /Users/welox/Repository/Depot/public>
+       # This relaxes Apache security settings.
+       AllowOverride all
+       # MultiViews must be turned off.
+       Options -MultiViews
+    </Directory>
+</VirtualHost>
+
+sudo vim /etc/apache2/httpd.conf
+LoadModule passenger_module /usr/local/rvm/gems/ruby-1.9.2-p320@global/gems/passenger-4.0.41/buildout/apache2/mod_passenger.so
+<IfModule mod_passenger.c>
+  PassengerRoot /usr/local/rvm/gems/ruby-1.9.2-p320@global/gems/passenger-4.0.41
+  PassengerDefaultRuby /usr/local/rvm/gems/ruby-1.9.2-p320/wrappers/ruby
+</IfModule>
+
+sudo vim /etc/hosts
+127.0.0.1       local.depot.dev
+
+sudo /usr/sbin/apachectl restart // 最後に再起動して完了
+
+
+// d1開始
+welox-no-Mac-mini:Depot welox$ rails generate scaffold cart
+Bundler is using a binstub that was created for a different gem.
+This is deprecated, in future versions you may need to `bundle binstub rails` to work around a system/bundle conflict.
+        SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+        This poses a security threat. It is strongly recommended that you
+        provide a secret to prevent exploits that may be possible from crafted
+        cookies. This will not be supported in future versions of Rack, and
+        future versions will even invalidate your existing user cookies.
+
+        Called from: /usr/local/rvm/gems/ruby-1.9.2-p320@global/gems/actionpack-3.1.0/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+
+      invoke  active_record
+      create    db/migrate/20140417080604_create_carts.rb
+      create    app/models/cart.rb
+      invoke    test_unit
+      create      test/unit/cart_test.rb
+      create      test/fixtures/carts.yml
+       route  resources :carts
+      invoke  scaffold_controller
+      create    app/controllers/carts_controller.rb
+      invoke    erb
+      create      app/views/carts
+      create      app/views/carts/index.html.erb
+      create      app/views/carts/edit.html.erb
+      create      app/views/carts/show.html.erb
+      create      app/views/carts/new.html.erb
+      create      app/views/carts/_form.html.erb
+      invoke    test_unit
+      create      test/functional/carts_controller_test.rb
+      invoke    helper
+      create      app/helpers/carts_helper.rb
+      invoke      test_unit
+      create        test/unit/helpers/carts_helper_test.rb
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/carts.js.coffee
+      invoke    scss
+      create      app/assets/stylesheets/carts.css.scss
+      invoke  scss
+   identical    app/assets/stylesheets/scaffolds.css.scss
+welox-no-Mac-mini:Depot welox$ 
+
+// migrate
+welox-no-Mac-mini:Depot welox$ rake db:migrate
+==  CreateCarts: migrating ====================================================
+-- create_table(:carts)
+   -> 0.0986s
+==  CreateCarts: migrated (0.0987s) ===========================================
+
 welox-no-Mac-mini:Depot welox$ 
