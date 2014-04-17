@@ -15,6 +15,16 @@ class ProductsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
     assert_not_nil assigns(:products)
+    assert_select ".list_description", minimum: 3
+    assert_select "dt", 'Programming Ruby 1.9'
+    assert_select ".list_line_odd", minimum: 2
+    assert_select ".list_line_even", minimum: 1
+    # 各レコードに、aタグが3つある（詳細、編集、削除）ことを確認
+    assert_select '.list_actions' do |elements|
+      elements.each do |element|
+        assert_select element, "a", 3
+      end
+    end
   end
 
   test "should get new" do
