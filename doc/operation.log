@@ -1527,3 +1527,54 @@ welox-no-Mac-mini:Depot welox$ rake db:migrate
 ==  CreateCarts: migrated (0.0987s) ===========================================
 
 welox-no-Mac-mini:Depot welox$ 
+
+
+// d2開始
+welox-no-Mac-mini:Depot welox$ rails generate scaffold line_item product_id:integer cart_id:integer
+Bundler is using a binstub that was created for a different gem.
+This is deprecated, in future versions you may need to `bundle binstub rails` to work around a system/bundle conflict.
+        SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+        This poses a security threat. It is strongly recommended that you
+        provide a secret to prevent exploits that may be possible from crafted
+        cookies. This will not be supported in future versions of Rack, and
+        future versions will even invalidate your existing user cookies.
+
+        Called from: /usr/local/rvm/gems/ruby-1.9.2-p320@global/gems/actionpack-3.1.0/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+
+      invoke  active_record
+      create    db/migrate/20140417082239_create_line_items.rb
+      create    app/models/line_item.rb
+      invoke    test_unit
+      create      test/unit/line_item_test.rb
+      create      test/fixtures/line_items.yml
+       route  resources :line_items
+      invoke  scaffold_controller
+      create    app/controllers/line_items_controller.rb
+      invoke    erb
+      create      app/views/line_items
+      create      app/views/line_items/index.html.erb
+      create      app/views/line_items/edit.html.erb
+      create      app/views/line_items/show.html.erb
+      create      app/views/line_items/new.html.erb
+      create      app/views/line_items/_form.html.erb
+      invoke    test_unit
+      create      test/functional/line_items_controller_test.rb
+      invoke    helper
+      create      app/helpers/line_items_helper.rb
+      invoke      test_unit
+      create        test/unit/helpers/line_items_helper_test.rb
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/line_items.js.coffee
+      invoke    scss
+      create      app/assets/stylesheets/line_items.css.scss
+      invoke  scss
+   identical    app/assets/stylesheets/scaffolds.css.scss
+welox-no-Mac-mini:Depot welox$ 
+welox-no-Mac-mini:Depot welox$ rake db:migrate
+==  CreateLineItems: migrating ================================================
+-- create_table(:line_items)
+   -> 0.0959s
+==  CreateLineItems: migrated (0.0960s) =======================================
+
+welox-no-Mac-mini:Depot welox$
