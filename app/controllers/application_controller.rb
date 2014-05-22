@@ -11,4 +11,19 @@ class ApplicationController < ActionController::Base
       session[:cart_id] = cart.id
       cart
     end
+
+  # 自由課題D ページに来た回数をカウントする
+  private 
+    def increment_counter
+      if session[:counter].nil?
+        session[:counter] = 0
+      else
+        session[:counter] += 1
+      end
+    end
+  # 自由課題D ページに来た回数をリセットする
+  private 
+    def reset_counter
+      session[:counter] = 0
+    end  
 end
