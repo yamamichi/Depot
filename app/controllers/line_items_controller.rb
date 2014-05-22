@@ -42,6 +42,9 @@ class LineItemsController < ApplicationController
   # POST /line_items
   # POST /line_items.json
   def create
+    # 自由課題D sessionに格納した回数をリセットする
+    session[:counter] = 0;
+
     @cart = current_cart
     product = Product.find(params[:product_id]) # paramsオブジェクトを使ってリクエストのパラメータを取得できる
     @line_item = @cart.line_items.build(product: product)

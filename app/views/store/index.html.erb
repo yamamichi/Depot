@@ -2,6 +2,11 @@
 <p id = "notice"><%= notice %></p>
 <% end %>
 
+<!-- 自由課題D このページに来た回数が5回以上の場合のみ表示する -->
+<% if @counter >= 5 %>
+このページに来た回数は<%= @counter %>回です
+<% end %>
+
 <h1>Pragmaticカタログ</h1>
 
 <% @products.each do |product| %>
