@@ -1,4 +1,5 @@
-# -*- encoding: utf-8 -*-
+# encoding: utf-8
+
 # 上記は日本語を使うためのマジックメソッド。view以外で日本語を使う際には毎回記載する必要がある
 class Product < ActiveRecord::Base
   # 将来的に、カートが複数になった場合、ひとつのproductが複数のline_itemを持つ可能性があるため

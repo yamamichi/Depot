@@ -2,6 +2,9 @@
 <p id = "notice"><%= notice %></p>
 <% end %>
 
+<!-- 自由課題D このページに来た回数が5回以上の場合のみ表示する -->
+<%= report_count -%>
+
 <h1>Pragmaticカタログ</h1>
 
 <% @products.each do |product| %>
@@ -11,6 +14,7 @@
     <%= sanitize(product.description) %>
     <div class = "price_line">
       <span class = "price"><%= number_to_currency(product.price) %></span>
+      <%= button_to 'カートに入れる', line_items_path(product_id: product) %>
     </div>
   </div>
 <% end %>

@@ -1578,3 +1578,246 @@ welox-no-Mac-mini:Depot welox$ rake db:migrate
 ==  CreateLineItems: migrated (0.0960s) =======================================
 
 welox-no-Mac-mini:Depot welox$
+
+
+// rvm default設定
+welox-no-Mac-mini:~ welox$ rvm use 1.9.2 --default
+Using /usr/local/rvm/gems/ruby-1.9.2-p320
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ 
+  [復元されました]
+Last login: Fri Apr 18 09:48:55 on ttys006
+
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ ruby 
+^Cruby: Interrupt
+
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ ruby -v
+ruby 2.0.0p247 (2013-06-27 revision 41674) [universal.x86_64-darwin13]
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ rvm list default
+
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ ruby -v
+ruby 2.0.0p247 (2013-06-27 revision 41674) [universal.x86_64-darwin13]
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ rvm use 1.9.2
+Using /usr/local/rvm/gems/ruby-1.9.2-p320
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ ruby -v
+ruby 1.9.2p320 (2012-04-20 revision 35421) [x86_64-darwin13.0.0]
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ rvm use 1.9.2 --default
+Using /usr/local/rvm/gems/ruby-1.9.2-p320
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ rvm list default
+
+welox-no-Mac-mini:~ welox$ which ruby
+/usr/local/rvm/rubies/ruby-1.9.2-p320/bin/ruby
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ sudorvm use 1.9.2 --default
+-bash: sudorvm: command not found
+welox-no-Mac-mini:~ welox$ rvmsudo  use 1.9.2 --default
+Warning: can not check `/etc/sudoers` for `secure_path`, falling back to call via `/usr/bin/env`, this breaks rules from `/etc/sudoers`. Run:
+
+    export rvmsudo_secure_path=1
+
+to avoid the warning, put it in shell initialization file to make it persistent.
+
+In case there is no `secure_path` in `/etc/sudoers`. Run:
+
+    export rvmsudo_secure_path=0
+
+to avoid the warning, put it in shell initialization file to make it persistent.
+Password:
+Sorry, try again.
+Password:
+env: use: No such file or directory
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ rvm get latest
+Downloading https://get.rvm.io
+bash: line 714: /usr/local/rvm/RELEASE: Permission denied
+Could not update RVM, get some help at #rvm IRC channel at freenode servers.
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ sudo rvm get latest
+Downloading https://get.rvm.io
+Downloading https://github.com/wayneeseguin/rvm/archive/1.25.22.tar.gz
+
+Upgrading the RVM installation in /usr/local/rvm/
+Upgrade of RVM in /usr/local/rvm/ is complete.
+
+# yamamichi,
+#
+#   Thank you for using RVM!
+#   We sincerely hope that RVM helps to make your life easier and more enjoyable!!!
+#
+# ~Wayne, Michal & team.
+
+In case of problems: http://rvm.io/help and https://twitter.com/rvm_io
+
+Upgrade Notes:
+
+  * No new notes to display.
+
+RVM reloaded!
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ ruby -v
+ruby 1.9.2p320 (2012-04-20 revision 35421) [x86_64-darwin13.0.0]
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ rvm use 1.9.2p320 --default
+ruby-1.9.2p320 is not installed.
+To install do: 'rvm install ruby-1.9.2p320'
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ rvm use 1.9.2
+Using /usr/local/rvm/gems/ruby-1.9.2-p320
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ rvm use 1.9.2-p320 --default
+Using /usr/local/rvm/gems/ruby-1.9.2-p320
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ rvm default list
+
+rvm rubies
+
+=> ruby-1.9.2-p320 [ x86_64 ]
+   ruby-1.9.3-p545 [ x86_64 ]
+   ruby-2.1.1 [ x86_64 ]
+
+# Default ruby not set. Try 'rvm alias create default <ruby>'.
+
+# => - current
+# =* - current && default
+#  * - default
+
+welox-no-Mac-mini:~ welox$ ruby -v
+ruby 1.9.2p320 (2012-04-20 revision 35421) [x86_64-darwin13.0.0]
+welox-no-Mac-mini:~ welox$ rvm use system
+Now using system ruby.
+welox-no-Mac-mini:~ welox$ ruby -v
+ruby 2.0.0p247 (2013-06-27 revision 41674) [universal.x86_64-darwin13]
+welox-no-Mac-mini:~ welox$ rvm list default
+
+welox-no-Mac-mini:~ welox$ rvm use ruby-1.9.2-p320 --default
+Using /usr/local/rvm/gems/ruby-1.9.2-p320
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ ruby -v
+ruby 1.9.2p320 (2012-04-20 revision 35421) [x86_64-darwin13.0.0]
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ rvm list default
+
+welox-no-Mac-mini:~ welox$ rvm default
+welox-no-Mac-mini:~ welox$ 
+  [復元されました]
+Last login: Fri Apr 18 12:38:43 on ttys000
+
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ ruby -v
+ruby 2.0.0p247 (2013-06-27 revision 41674) [universal.x86_64-darwin13]
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$  rvm --default use 1.9.2
+Using /usr/local/rvm/gems/ruby-1.9.2-p320
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ ruby -v
+ruby 1.9.2p320 (2012-04-20 revision 35421) [x86_64-darwin13.0.0]
+welox-no-Mac-mini:~ welox$ 
+  [復元されました]
+Last login: Fri Apr 18 13:43:19 on ttys000
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ ruby -v
+ruby 2.0.0p247 (2013-06-27 revision 41674) [universal.x86_64-darwin13]
+welox-no-Mac-mini:~ welox$  rvm --default use 1.9.2-p320
+Using /usr/local/rvm/gems/ruby-1.9.2-p320
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ ruby -v
+ruby 1.9.2p320 (2012-04-20 revision 35421) [x86_64-darwin13.0.0]
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ rvm use system
+Now using system ruby.
+welox-no-Mac-mini:~ welox$ ruby -v
+ruby 2.0.0p247 (2013-06-27 revision 41674) [universal.x86_64-darwin13]
+welox-no-Mac-mini:~ welox$  rvm --default use 1.9.2-p320
+Using /usr/local/rvm/gems/ruby-1.9.2-p320
+welox-no-Mac-mini:~ welox$ ruby -v
+ruby 1.9.2p320 (2012-04-20 revision 35421) [x86_64-darwin13.0.0]
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ ruby use system
+ruby: No such file or directory -- use (LoadError)
+welox-no-Mac-mini:~ welox$ rvm  use system
+Now using system ruby.
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ ruby -v
+ruby 2.0.0p247 (2013-06-27 revision 41674) [universal.x86_64-darwin13]
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ rvm default
+welox-no-Mac-mini:~ welox$ ruby -v
+ruby 2.0.0p247 (2013-06-27 revision 41674) [universal.x86_64-darwin13]
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$  rvm --default use 1.9.2-p320
+Using /usr/local/rvm/gems/ruby-1.9.2-p320
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ ruby default
+ruby: No such file or directory -- default (LoadError)
+welox-no-Mac-mini:~ welox$ rvm default
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ ruby -v
+ruby 2.0.0p247 (2013-06-27 revision 41674) [universal.x86_64-darwin13]
+welox-no-Mac-mini:~ welox$ rvmsudo --default use 1.9.2^p320
+Warning: can not check `/etc/sudoers` for `secure_path`, falling back to call via `/usr/bin/env`, this breaks rules from `/etc/sudoers`. Run:
+
+    export rvmsudo_secure_path=1
+
+to avoid the warning, put it in shell initialization file to make it persistent.
+
+In case there is no `secure_path` in `/etc/sudoers`. Run:
+
+    export rvmsudo_secure_path=0
+
+to avoid the warning, put it in shell initialization file to make it persistent.
+sudo: illegal option -- -
+usage: sudo -h | -K | -k | -L | -V
+usage: sudo -v [-AknS] [-g groupname|#gid] [-p prompt] [-u user name|#uid]
+usage: sudo -l[l] [-AknS] [-g groupname|#gid] [-p prompt] [-U user name] [-u user name|#uid] [-g groupname|#gid] [command]
+usage: sudo [-AbEHknPS] [-C fd] [-g groupname|#gid] [-p prompt] [-u user name|#uid] [-g groupname|#gid] [VAR=value] [-i|-s] [<command>]
+usage: sudo -e [-AknS] [-C fd] [-g groupname|#gid] [-p prompt] [-u user name|#uid] file ...
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ rvm alias create default 1.9.2-p320
+touch: /usr/local/rvm/config/alias: Permission denied
+mkdir: /usr/local/rvm/log/1397796396_ruby-1.9.2-p320: Permission denied
+tee: /usr/local/rvm/log/1397796396_ruby-1.9.2-p320/alias_create.log: No such file or directory
+Creating alias default for ruby-1.9.2-p320.
+Error running 'alias_create_exceute',
+showing last 15 lines of /usr/local/rvm/log/1397796396_ruby-1.9.2-p320/alias_create.log
+tail: /usr/local/rvm/log/1397796396_ruby-1.9.2-p320/alias_create.log: No such file or directory
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ sudo rvm alias create default 1.9.2-p320
+Password:
+Creating alias default for ruby-1.9.2-p320...
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ ruby -v
+ruby 2.0.0p247 (2013-06-27 revision 41674) [universal.x86_64-darwin13]
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ 
+  [復元されました]
+Last login: Fri Apr 18 13:47:03 on ttys000
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ ruby -v
+ruby 1.9.2p320 (2012-04-20 revision 35421) [x86_64-darwin13.0.0]
+welox-no-Mac-mini:~ welox$ 
+welox-no-Mac-mini:~ welox$ 
+
